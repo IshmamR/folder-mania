@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
+import FolderTree from './components/FolderTree';
+import { FoldersProvider } from './contexts/FoldersContext';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	return (
+		<FoldersProvider>
+			<div className="App">
+				<FolderTree />
+			</div>
+		</FoldersProvider>
+	);
 }
 
 export default App;
