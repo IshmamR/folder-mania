@@ -5,6 +5,7 @@ export const FoldersContext = createContext();
 
 export const FoldersProvider = (props) => {
 	const [Folders, setFolders] = useState([]);
+	const [render, setRender] = useState(false);
 
 	useEffect(() => {
 		axios.get('https://node-virtual-folder.herokuapp.com/folders')
@@ -15,10 +16,11 @@ export const FoldersProvider = (props) => {
 				setFolders(data);
 			})
 			.catch(err => console.log(err) );
-	}, []);
+		console.log('rendered');
+	}, [render]);
 
 	return (
-		<FoldersContext.Provider value={{Folders, setFolders}}>
+		<FoldersContext.Provider value={{Folders, setFolders, setRender}}>
 			{props.children}
 		</FoldersContext.Provider>
 	)
