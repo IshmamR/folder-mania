@@ -20,7 +20,7 @@ export const FoldersProvider = (props) => {
 	}, [render]);
 
 	return (
-		<FoldersContext.Provider value={{Folders, setFolders, setRender}}>
+		<FoldersContext.Provider value={{Folders, setFolders, render, setRender}}>
 			{props.children}
 		</FoldersContext.Provider>
 	)

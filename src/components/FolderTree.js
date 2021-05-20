@@ -37,7 +37,6 @@ const FolderTreeNode = (props) => {
 	const handleChildren = () => setChildVisibility(!childVisible);
 	
 	const handleInsertFolderBox = (parentFolder) => {
-		console.log('')
 		setInsertForm(true);
 	}
 	const handleDeleteFolderBox = (folderToDelete) => {

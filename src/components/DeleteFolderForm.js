@@ -1,22 +1,20 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import axios from 'axios';
 import { FoldersContext } from '../contexts/FoldersContext';
 
 const DeleteFolderForm = (props) => {
 	const folderToDelete = props.value;
-	console.log(folderToDelete)
 	const [deleteForm, setDeleteForm] = props.visibility;
 	
-	const {setRender} = useContext(FoldersContext);
+	const {render, setRender} = useContext(FoldersContext);
 	const handleDelete = () => {
-		setRender(true);
 		axios.delete('https://node-virtual-folder.herokuapp.com/folders', {
 			data: {
 				id: String(folderToDelete._id)
 			}
 		})
 		.then(res => {
-			setRender(false);
+			setRender(!render);
 			setDeleteForm(false);
 		})
 		.catch((err) => console.log(err) );
