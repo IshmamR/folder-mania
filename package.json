@@ -1,6 +1,6 @@
 {
-  "name": "node-virtual-folder",
-  "version": "0.1.0",
+  "name": "folder-mania",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

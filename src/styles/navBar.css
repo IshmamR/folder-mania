@@ -23,6 +23,19 @@
 .theme-toggler.react-toggle--checked .react-toggle-track {
 	background-color: #FEF3C7;
 }
+.theme-toggler.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+	background-color: #FBBF24;
+}
 .theme-toggler.react-toggle--checked .react-toggle-thumb {
 	border-color: #FCD34D;
+}
+.theme-toggler.react-toggle--focus .react-toggle-thumb {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.theme-toggler.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
