@@ -3,9 +3,9 @@ import FolderTree from '../components/FolderTree';
 
 const Home = () => {
 	return (
-		<>
+		<div className="Home">
 			<FolderTree />
-		</>
+		</div>
 	)
 }
 

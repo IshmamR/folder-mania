@@ -1,0 +1,38 @@
+.Footer {
+	width: 100%;
+	padding: 20px 0 30px 0;
+	background-color: #1E40AF;
+	color: #FAFAFA;
+}
+.Footer-top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 20px;
+	font-size: 18px;
+}
+.Footer-top div {min-width: 250px;}
+.Footer-top li {padding: 3px 0;}
+.Footer-top a {color: #FAFAFA;}
+.Footer-top a:hover {color: #FCE7F3;}
+
+hr {
+	width: 70%;
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	max-height: 0.5px;
+	margin: 0 auto;
+}
+
+.Footer-bottom {
+	padding-top: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+.Footer-bottom img {
+	width: 50px;
+	margin: auto;
+}
+.Footer-bottom a {color: #FAFAFA;}
+.Footer-bottom a:hover {color: #10B981;}

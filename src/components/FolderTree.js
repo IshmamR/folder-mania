@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { FoldersContext } from '../contexts/FoldersContext';
 import FolderTreeNode from './FolderTreeNode';
+import Loader from './Loader';
 
 import '../styles/folderTree.css';
 
@@ -10,7 +11,7 @@ const FolderTree = ({ id }) => {
 
 	return(
 		<>
-		{Folders?.length > 0 &&
+		{Folders?.length > 0 ? (
 			<div className="main shadow">
 				<ul>
 					<FolderTreeNode 
@@ -19,6 +20,9 @@ const FolderTree = ({ id }) => {
 					/>
 				</ul>
 			</div>
+			) : (
+				<Loader />
+			)
 		}
 		</>
 	)

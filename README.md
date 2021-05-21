@@ -4,7 +4,7 @@ A virtual folder tree visualizer. Live at [https://folder-mania.netlify.app](htt
 
 ## About the build
 
-This is an front end application for the virtual folder tree structure, ['node-virtua-folder'](https://node-virtual-folder.herokuapp.com). The idea was to create a full stack virtual folder tree that can be updated.
+This is an front end application for the virtual folder tree structure, ['node-virtual-folder'](https://node-virtual-folder.herokuapp.com). The idea was to create a full stack virtual folder tree that can be updated.
 
 The tools I used for this are React, React context API, axios, Fontawesome library, and react-toggle for the small theme toggle button.
 
