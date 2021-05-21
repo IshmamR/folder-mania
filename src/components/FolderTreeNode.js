@@ -48,11 +48,14 @@ const FolderTreeNode = (props) => {
 			<span className="folder-name" title={folder?.name}>
 				{folder?.name.length > 16 ? folder?.name.slice(0,10)+'...' : folder?.name}
 			</span>
-			<FontAwesomeIcon 
-				icon={faTrash} 
-				onClick={() => handleDeleteFolderBox(folder)}
-				className="trashIcon icon"
-			/>
+			{folder?.root ? '' : (
+				<FontAwesomeIcon 
+					icon={faTrash} 
+					onClick={() => handleDeleteFolderBox(folder)}
+					className="trashIcon icon"
+				/>
+				)
+			}
 			<FontAwesomeIcon 
 				icon={plusIconSquare? faPlus : faPlusSquare} 
 				onClick={() => handleInsertFolderBox(folder)}
