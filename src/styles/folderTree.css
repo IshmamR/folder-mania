@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+	font-family: var(--font);
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--body-bg-color);
+	color: var(--text-primary);
+}
+
+.main {
+	min-width: 200px;
+	width: 600px;
+	max-width: 90%;
+	margin: 10vh auto;
+	border: 1px solid var(--main-border-color);
+	overflow: hidden;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	border-radius: var(--rounded);
+}
+.shadow {
+	position:relative;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.shadow:before, .shadow:after {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	top:0; bottom:0; left:0; right:0;
+}
+.shadow:after {
+	right:0;
+	left:auto;
+	-webkit-transform:skew(8deg) rotate(3deg);
+	   -moz-transform:skew(8deg) rotate(3deg);
+		-ms-transform:skew(8deg) rotate(3deg);
+		 -o-transform:skew(8deg) rotate(3deg);
+			transform:skew(8deg) rotate(3deg);
+}
+
+
+ul {
+	padding: 0 10px;
+	list-style: none;
+	overflow: auto;
+}
+.li {
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 22px;
+}
+.li:before {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 15px;
+	height: 1.5px;
+	margin: auto;
+	content: '';
+	background-color: var(--tree-line-color);
+}
+.li:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	content: '';
+	background-color: var(--tree-line-color);
+} 
+.li:last-child:after {
+	height: 25px;
+}
+
+
+@media only screen and (max-width: 520px) {
+	.li {
+		font-size: 18px;
+	}
+	.icon {
+		font-size: 20px;
+	}
+}

@@ -1,14 +1,14 @@
 import React from 'react';
-import FolderTree from './components/FolderTree';
 import { FoldersProvider } from './contexts/FoldersContext';
-
-import './App.css';
+import Home from './pages/Home';
+import NavBar from './components/NavBar';
 
 const App = () => {
 	return (
 		<FoldersProvider>
 			<div className="App">
-				<FolderTree />
+				<NavBar />
+				<Home />
 			</div>
 		</FoldersProvider>
 	);

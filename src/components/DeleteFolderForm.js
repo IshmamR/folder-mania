@@ -8,6 +8,7 @@ const DeleteFolderForm = (props) => {
 	
 	const {render, setRender} = useContext(FoldersContext);
 	const handleDelete = () => {
+		setDeleteForm(false);
 		axios.delete('https://node-virtual-folder.herokuapp.com/folders', {
 			data: {
 				id: String(folderToDelete._id)
@@ -15,7 +16,6 @@ const DeleteFolderForm = (props) => {
 		})
 		.then(res => {
 			setRender(!render);
-			setDeleteForm(false);
 		})
 		.catch((err) => console.log(err) );
 	}

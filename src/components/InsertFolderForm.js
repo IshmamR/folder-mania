@@ -13,14 +13,13 @@ const InsertFolderForm = (props) => {
 	const {render, setRender} = useContext(FoldersContext);
 	const handlePost = () => {
 		if (name.trim() !== '') {
+			setInsertForm(false);
 			axios.post('https://node-virtual-folder.herokuapp.com/folders', {
 				name: String(name),
 				parent_id: String(parentFolder._id)
 			})
 			.then(res => {
-				console.log(res.data);
 				setRender(!render);
-				setInsertForm(false);
 			})
 			.catch(err => console.log(err) );
 		}

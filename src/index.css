@@ -1,26 +1,23 @@
-:root {
-	--violet: #8F00F2;
-	--yellow: #FDD404;
-	--green: #5CFF00;
-	--blue: #38CAF6;
-	--red: #FD0100;
-	--text-red: #FF0C12;
-	--form-bg-dark: rgba(100, 100, 110, 0.9);
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&family=Work+Sans:wght@400&display=swap');
 
-::selection {
-	color: #0f0f0f;
-	background-color: var(--green);
-}
-body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #0f0f0f;
-	color: #FFFFFF;
+html:root {
+	--body-bg-color: #FFFFFF;
+	--font: 'Work Sans', sans-serif;
+	--rounded: 5px;
+	--nav-bg: #3B82F6;
+	--main-border-color: transparent;
+	--folder-color: #FCD34D;
+	--plus-color: #2563EB;
+	--tree-line-color: #212121;
+	--trash-color: #F11628;
+	--text-red: #FF0C12;
+	--text-primary: #010101;
+	--form-bg-dark: rgba(250, 250, 250, 0.9);
+	--form-border: #60A5FA;
+	--form-input-bg: rgba(255, 255, 255, 0.9);
+	--form-input-color: #1D4ED8;
+	--btn-green: #7FFF00;
+	--btn-red: #EF4444
 }
 
 h1, h2, h3, h4, h5, h6 {margin: 0;}
@@ -29,143 +26,7 @@ input:focus, button:focus, textarea:focus {outline: none;}
 
 
 
-.main {
-	min-width: 200px;
-	width: 600px;
-	max-width: 90%;
-	margin: auto;
-	border: 1px solid var(--violet);
-	overflow: auto;
-}
-
-ul {
-	padding-left: 5px;
-	list-style: none;
-}
-.li {
-	position: relative;
-	padding-top: 10px;
-	padding-bottom: 15px;
-	padding-left: 20px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	font-size: 24px;
-}
-.li:before {
-	position: absolute;
-	top: 25px;
-	left: 0;
-	width: 15px;
-	height: 1.5px;
-	margin: auto;
-	content: '';
-	background-color: var(--blue);
-}
-.li:after {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 2.5px;
-	height: 100%;
-	content: '';
-	background-color: var(--blue);
-} 
-.li:last-child:after {
-	height: 25px;
-}
-
-.no-folder {
-	color: var(--text-red);
-	font-weight: 400;
-	font-size: 16px;
-}
-.no-folder::selection {color: black; background: var(--red)}
 
 
-.folderIcons {
-	margin-right: 10px;
-	cursor: pointer;
-	color: var(--yellow);
-}
-.trashIcon {
-	font-size: 16px;
-	padding-bottom: 2px;
-	margin-left: 10px;
-	color: var(--red);
-	cursor: pointer;
-}
-.plusIcons {
-	position: absolute;
-	right: 40px;
-	cursor: pointer;
-	margin-top: 4px;
-	/*margin-right: -10px;*/
-	color: var(--green);
-}
 
 
-.insertFormOuter {
-	background-color: rgba(10, 10, 10, 0.3);
-	box-sizing: border-box;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 99;
-}
-.InsertFormContainer {
-	position: relative;
-	width: 450px;
-	max-width: 95%;
-	background-color: var(--form-bg-dark);
-	box-sizing: border-box;
-	border: 3px solid var(--green);
-	padding: 50px 0px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	overflow: visible;
-	
-	/*z-index: 2;*/
-}
-
-
-.InsertFormContainer h4 {}
-.InsertFormContainer input {
-	margin: 20px 0;
-	background-color: rgba(10, 10, 10, 0.7);
-	border: none;
-	padding: 5px 8px;
-	width: 300px;
-	max-width: 90%;
-	color: var(--blue);
-	font-size: 16px;
-}
-
-.InsertFormContainer button {
-	border: none;
-	border: 2px solid transparent;
-	background-color: var(--green);
-	padding: 6px 15px;
-	font-size: 18px;
-	margin: 0 10px;
-	cursor: pointer;
-}
-.InsertFormContainer button:nth-child(2) {
-	background-color: var(--red);
-}
-.InsertFormContainer button:nth-child(1):hover {
-	box-sizing: content-box;
-	color: var(--green);
-	background-color: transparent;
-	border: 2px solid var(--green);
-}
-.InsertFormContainer button:nth-child(2):hover {
-	color: #fafafa;
-}

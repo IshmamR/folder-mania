@@ -1,0 +1,108 @@
+.folder-name {}
+.folder-name::selection {
+	color: var(--plus-color);
+}
+
+.no-folder {
+	color: var(--text-red);
+	font-weight: 400;
+	font-size: 16px;
+}
+.no-folder::selection {
+	color: var(--body-bg-color); 
+	background: var(--text-red);
+}
+
+
+.folderIcons {
+	margin-right: 10px;
+	cursor: pointer;
+	color: var(--folder-color);
+}
+.trashIcon {
+	font-size: 16px;
+	padding-bottom: 2px;
+	margin-left: 10px;
+	margin-right: 60px;
+	color: var(--trash-color);
+	cursor: pointer;
+}
+.plusIcons {
+	position: absolute;
+	right: 20px;
+	cursor: pointer;
+	margin-top: 4px;
+	/*margin-right: -10px;*/
+	color: var(--plus-color);
+}
+
+/*=========================*/
+/*========Forms============*/
+.insertFormOuter {
+	background-color: rgba(10, 10, 10, 0.3);
+	box-sizing: border-box;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 99;
+}
+.InsertFormContainer {
+	position: relative;
+	width: 450px;
+	max-width: 95%;
+	background-color: var(--form-bg-dark);
+	box-sizing: border-box;
+	border: 4px solid var(--form-border);
+	padding: 50px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: visible;
+	border-radius: var(--rounded);
+}
+.InsertFormContainer h4 {
+	word-wrap: break-word; 
+	word-break: break-all; 
+	text-align: center; 
+	margin-bottom: 10px;
+}
+.InsertFormContainer input {
+	margin: 20px 0;
+	background-color: var(--form-input-bg);
+	border: none;
+	padding: 5px 8px;
+	width: 300px;
+	max-width: 90%;
+	color: var(--form-input-color);
+	font-family: var(--font);
+	font-size: 16px;
+	border-radius: var(--rounded);
+}
+
+.InsertFormContainer button {
+	border: none;
+	border: 2px solid transparent;
+	background-color: var(--btn-green);
+	padding: 6px 15px;
+	font-size: 18px;
+	margin: 0 10px;
+	cursor: pointer;
+	color: var(--body-bg-color);
+	border-radius: var(--rounded);
+}
+.InsertFormContainer button:nth-child(2) {
+	background-color: var(--btn-red);
+}
+.InsertFormContainer button:nth-child(1):hover {
+	color: var(--btn-green);
+	background-color: transparent;
+	border: 2px solid var(--btn-green);
+}
+.InsertFormContainer button:nth-child(2):hover {
+	color: #fafafa;
+}

@@ -1,0 +1,28 @@
+.Nav .title::selection {
+	background-color: #fafafa;
+	color: var(--nav-bg);
+}
+.Nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px 0;
+	margin-bottom: 40px;
+	background-color: var(--nav-bg);
+	color: #fefefe;
+	z-index: 100;
+}
+.Nav .title {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.theme-toggler.react-toggle--checked .react-toggle-track {
+	background-color: #FEF3C7;
+}
+.theme-toggler.react-toggle--checked .react-toggle-thumb {
+	border-color: #FCD34D;
+}
